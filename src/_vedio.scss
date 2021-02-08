@@ -1,0 +1,146 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.vedio {
+    @include flex-center();
+    flex-direction: column;
+    background-color: $secondary-color;
+    height: 100%;
+  
+    &__cotainer {
+      @include flex-center();
+      position: relative;
+
+      img {
+        height: 200px;
+        border-radius: 15px;
+      }
+  
+      i {
+        position: absolute;
+        font-size: 45px;
+        color: $primary-color;
+        border-radius: 50%;
+        background-color: #fff;
+      }
+   
+     }
+     
+    p {
+      color: $Body-text-color;
+      width: 90%;
+      margin-top: 25px;
+      text-align: center;
+    }
+  
+  }
+
+  @include tablet {
+
+    .vedio {
+
+    
+    &__cotainer {
+
+      img {
+        height: 300px;
+      }
+
+      i {
+        font-size: 55px;
+      }
+    }
+  }
+
+  p {
+    width: 80%;
+  }
+}
+
+/* video popup */ 
+
+#videobox {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(35, 33, 33, 0.975);
+  z-index: 1100;
+
+  i {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+    
+  } 
+
+ .video-container  {
+   height: 80%;
+   width: 90%;
+   position: relative;
+   
+  iframe {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+  }
+ }
+
+}
+
+
+/* video popup */ 
+
+
+@include desktop {
+
+  .vedio{ 
+    &__cotainer {
+
+    img {
+      height: 400px;
+    }
+
+    i {
+      font-size: 65px;
+      cursor: pointer;
+    }
+  }
+}
+
+p {
+  width: 70%;
+}
+}
+
+
+@include large-devices{
+
+  .vedio {
+
+  &__cotainer {
+
+    img {
+      height: 500px;
+
+    }
+
+    i {
+      font-size: 70px;
+    }
+  }
+
+ p {
+  width: 65%;
+ }
+}
+}

@@ -1,0 +1,22 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+  .swiper1 {
+    @include flex-center();
+    height: 100px;
+    width: 80%;
+    .swiper-wrapper {
+    
+  
+    .swiper-slide {
+      height: 50px;
+      width: 170px;
+      @include flex-center();
+
+    }
+    }
+    .swiper-pagination-bullet-active {
+      background-color: #5F4DEE !important;
+  }
+  }
+

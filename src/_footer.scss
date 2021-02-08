@@ -1,0 +1,132 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.footer { 
+    @include flex-center();
+    background-image: url(./Images/bg-footer.svg);
+    background-position: center;
+    background-size: cover;
+    height: 920px;
+    color: #fff;
+    position: relative;
+  
+    &__container {
+      position: absolute;
+      bottom: 0;
+      padding: 20px 7%;
+  
+    }
+    p {
+      width: 100%
+    }
+  
+  }
+  
+  .footer__infos {
+    @include flex-space-between();
+    flex-direction: column;
+    margin-bottom: 50px;
+
+    
+    .about,
+    .links,
+    .contact {
+      width: 100%;
+      font-size: 15px;
+      margin: 15px;
+
+      li {
+        list-style: none;
+        margin-bottom: 10px;
+        
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
+
+        i {
+          font-size: 14px;
+          margin-right: 10px;
+        }
+
+      }
+
+    }
+
+    .links  &items__link &__link i {
+      font-size: 8px;
+    }
+
+    .contact &__list &__item i:nth-child(3) {
+      margin-left: 15px;
+
+    }
+    
+    h4 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+  }
+
+  .footer-lign {
+    background-color: rgb(181, 178, 178);
+    height: 0.08px;
+    margin-bottom: 20px;
+
+  }
+
+  .copyright {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  @include tablet {
+    .footer{ 
+      height: 750px;
+    }
+  }
+
+  @include desktop {
+    .footer{ 
+      height: 450px;
+      
+      &__infos {
+      @include flex-space-between();
+      flex-direction: row;
+      margin-bottom: 50px;
+
+      .about,
+      .links,
+      .contact {
+        width: 33%;
+        font-size: 15px;
+        margin: 15px;
+
+      }
+    }
+
+  }
+}
+
+
+  @include large-devices {
+    .footer{ 
+      height: 450px;
+      
+      &__infos {
+      @include flex-space-between();
+      flex-direction: row;
+      margin-bottom: 50px;
+
+      .about,
+      .links,
+      .contact {
+        width: 33%;
+        font-size: 15px;
+        margin: 15px;
+
+      }
+    }
+  }
+  }

@@ -1,0 +1,56 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+  * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+  }
+  
+  html, 
+  body {
+      margin: 0px;
+      padding: 0px;
+      overflow-x: hidden;
+      font-family: 'Open Sans';
+      scroll-behavior: smooth;
+      position: relative;
+  }
+  
+
+  section {
+    height: 100vh;
+    padding: 50px 7%;
+    padding-top: 70px;
+  }
+  
+  button {
+    padding: 5px 18px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    color: #fff;
+    background-color: $primary-color;
+    font-weight: bold;
+    outline: none;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    border: 2px solid $primary-color;
+    color: $primary-color;
+    background-color: #fff;
+  }
+  
+  .section-head {
+    text-align: center;
+    width: 80%;
+    text-align: center;
+    h2 {
+      color: $primary-color;
+    }
+    h3 {
+      font-size: 30px;
+    }
+  
+  }

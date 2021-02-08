@@ -1,0 +1,89 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+
+#services {
+    height: 100%;
+
+    .services__container {
+      @include flex-center();
+      flex-direction: column;
+      width: 100%;
+  
+    }
+  
+  }
+  
+  .services__items {
+    @include flex-space-between();
+    flex-direction: column;
+     margin-top: 60px;
+     width: 100%;
+  
+     .services__item {
+       width: 80%;
+       text-align: center;
+       margin-top: 40px;
+  
+  
+       &__img img {
+         height: 200px;
+         margin-bottom: 20px;
+       }
+  
+       &__description {
+         
+         h4 {
+           margin-bottom: 10px;
+           font-size: 20px;
+         }
+
+         p {
+           width: 100%;
+         }
+       }
+     }
+   }
+  
+ .services__head {
+    h3 {
+      font-size: 20px
+    }
+  }
+
+  @include tablet-desktop () {
+    
+    #services  {
+      .services__head {
+        h3 {
+          font-size: 25px
+        }
+      }
+      .services__items {
+        flex-direction: row;
+        flex-wrap: wrap;
+  
+        .services__item {
+          width: 45%;
+        }
+      }
+      
+    }
+    
+  }
+  
+  @include large-devices () {
+  
+    #services  {
+  
+      .services__items {
+        flex-direction: row;
+  
+        .services__item {
+          width: 20%;
+        }
+      }
+      
+    }
+    
+  }

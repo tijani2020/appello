@@ -1,0 +1,62 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.testimonials {
+    height: 80vh;
+    @include flex-center();
+    padding: 80px 7%;
+
+    .swiper-container{
+      height: 140%;
+      width: 80%;
+    }
+
+  
+  }
+  
+  .testimonials__item {
+    @include flex-center();
+    flex-direction: column;
+    text-align: center;
+   
+
+    &__img img {
+      height: 200px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    &__qoutes{
+      margin-left: 5%;
+
+      p {
+        color: #555;
+        font-style: italic;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+    }
+  }
+  
+    .swiper-pagination{
+    margin-top: 30px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $primary-color !important;
+}
+
+@include large-devices {
+
+  .testimonials {
+    height: 50vh;
+  }
+
+  .testimonials__item {
+    flex-direction: row;
+    text-align: start;
+  }
+
+}
+
+
